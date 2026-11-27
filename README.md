@@ -97,17 +97,9 @@ docker compose down
 
 Lệnh này xóa container nhưng giữ dữ liệu MySQL nhờ Volume. Muốn xóa cả dữ liệu: `docker compose down -v`.
 
-## Lỗi thường gặp
 
-| Lỗi | Cách xử lý |
-| --- | --- |
-| `port is already allocated` | Tắt phần mềm đang dùng cổng 80, hoặc đổi `80:80` thành `8080:80` |
-| `SQLSTATE[HY000] [2002]` | Kiểm tra `DB_HOST=db` và chờ MySQL khởi động xong |
-| `502 Bad Gateway` | Chạy `docker compose logs nginx app` để xem nguyên nhân |
-| Trang báo lỗi `500` hoặc trang trắng | Chạy `chown -R www-data:www-data storage bootstrap/cache` và `chmod -R 777 storage bootstrap/cache` trong container |
-
-## Thành viên nhóm
-| Tính | Leader: cấu hình Docker gốc, slide |
-| Trân | Tích hợp Flask, docker-compose |
-| My | Lý thuyết, kiểm thử, README |
-| Khoa | Sơ đồ, demo, thuyết trình |
+Thành viên nhóm
+Tính (Leader): cấu hình Docker gốc, làm slide
+Trân: tích hợp Flask, docker-compose
+My: lý thuyết, kiểm thử, README
+Khoa: sơ đồ, demo, thuyết trình
